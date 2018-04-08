@@ -46,9 +46,9 @@ end
  post '/withdrawal' do
    if logged_in? && current_user.balance > params[:amount].to_f
      current_user.update(balance: current_user.balance - params[:amount].to_f)
-     redirect '/account'
+     redirect "/account"
    else
-     redirect '/failure'
+     redirect "/failure"
    end
  end
 
