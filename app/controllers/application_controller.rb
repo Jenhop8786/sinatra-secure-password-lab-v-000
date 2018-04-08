@@ -31,7 +31,15 @@ class ApplicationController < Sinatra::Base
     erb :account
   end
 
+ get '/withdrawal' do
 
+   if logged_in?
+     erb :withdraw
+   else
+     redirect '/failure'
+   end
+ end
+ 
   get "/login" do
     erb :login
   end
@@ -44,7 +52,7 @@ class ApplicationController < Sinatra::Base
        redirect "/account"
      else
        redirect "/failure"
-     end 
+     end
   end
 
   get "/failure" do
