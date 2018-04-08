@@ -29,9 +29,10 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
     if logged_in?
-      
+
     erb :account
   end
+end
 
  get '/withdrawal' do
 
