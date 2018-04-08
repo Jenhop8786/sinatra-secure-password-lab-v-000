@@ -25,7 +25,8 @@ class ApplicationController < Sinatra::Base
       redirect "/login"
     else
       redirect "/failure"
-    en
+    end
+  end
 
   get '/account' do
     if logged_in?
