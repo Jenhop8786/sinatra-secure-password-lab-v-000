@@ -39,7 +39,7 @@ end
    if logged_in?
      erb :withdraw
    else
-     redirect '/failure'
+     redirect "/failure"
    end
  end
 
